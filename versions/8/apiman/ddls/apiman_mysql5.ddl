@@ -55,7 +55,7 @@ CREATE TABLE `policydefs` (
   `policyImpl` varchar(255) NOT NULL,
   `pluginId` bigint(20),
   KEY `FK_policydefs_1` (`pluginId`),
-  CONSTRAINT `FK_policydefs_1` FOREIGN KEY (`pluginId`) REFERENCES `plugins` (`id`)
+  CONSTRAINT `FK_policydefs_1` FOREIGN KEY (`pluginId`) REFERENCES `plugins` (`id`),
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB;
 
@@ -206,6 +206,16 @@ CREATE TABLE `service_versions` (
   UNIQUE KEY `UK_service_versions_1` (`service_id`,`service_orgId`,`version`),
   CONSTRAINT `FK_service_versions_1` FOREIGN KEY (`service_id`, `service_orgId`) REFERENCES `services` (`id`, `organizationId`)
 ) ENGINE=InnoDB;
+
+
+CREATE TABLE `endpoint_properties` (
+  `service_version_id` bigint(20) NOT NULL,
+  `value` varchar(255) DEFAULT NULL,
+  `name` varchar(255) NOT NULL,
+  PRIMARY KEY (`service_version_id`,`name`),
+  CONSTRAINT `FK_end_props_1` FOREIGN KEY (`service_version_id`) REFERENCES `service_versions` (`id`)
+) ENGINE=InnoDB;
+
 
 CREATE TABLE `service_defs` (
   `id` bigint(20) NOT NULL,

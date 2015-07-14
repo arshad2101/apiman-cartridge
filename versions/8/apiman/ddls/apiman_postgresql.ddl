@@ -47,7 +47,7 @@ CREATE TABLE plugins (
     name character varying(255) NOT NULL,
     description character varying(512),
     createdBy character varying(255) NOT NULL,
-    createdOn timestamp without time zone NOT NULL,
+    createdOn timestamp without time zone NOT NULL
 );
 
 ALTER TABLE ONLY plugins
@@ -346,6 +346,21 @@ ALTER TABLE ONLY service_versions
 ALTER TABLE ONLY service_versions
     ADD CONSTRAINT FK_service_versions_1 FOREIGN KEY (service_id, service_orgId) REFERENCES services(id, organizationId);
 
+--
+-- Name: endpoint_properties
+--
+
+CREATE TABLE endpoint_properties (
+    service_version_id bigint NOT NULL,
+    value character varying(255),
+    name character varying(255) NOT NULL
+);
+
+ALTER TABLE ONLY endpoint_properties
+    ADD CONSTRAINT PK_end_props PRIMARY KEY (service_version_id, name);
+
+ALTER TABLE ONLY endpoint_properties
+    ADD CONSTRAINT FK_end_props_1 FOREIGN KEY (service_version_id) REFERENCES service_versions(id);
 
 --
 -- Name: service_defs
