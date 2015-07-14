@@ -1,13 +1,13 @@
 Name: wildfly
-Cartridge-Short-Name: WILDFLY
+Cartridge-Short-Name: apiman
 Display-Name: apiman 1.1.3.Final
 Description: "Authentication and Authorization Server."
 Version: '8'
-Source-Url: https://github.com/christinalau/apiman-cartridge/archive/master.zip
+Source-Url: https://github.com/EricWittmann/apiman-cartridge/archive/master.zip
 License: LGPL
 License-Url: http://www.gnu.org/copyleft/lesser.txt
 Vendor: WildFly
-Cartridge-Version: '0.0.6'
+Cartridge-Version: '1.1.4.Final'
 Cartridge-Vendor: wildfly
 Categories:
   - service
@@ -53,6 +53,8 @@ Provides:
   - wildfly-8
   - "wildfly"
   - wildfly-standalone
+  - apiman-1.1
+  - "apiman"
 Publishes:
   publish-http-url:
     Type: "NET_TCP:httpd-proxy-info"
