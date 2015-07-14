@@ -1,6 +1,6 @@
-Name: wildfly
+Name: apiman
 Cartridge-Short-Name: apiman
-Display-Name: apiman 1.1.3.Final
+Display-Name: apiman 1.1.4.Final
 Description: "Authentication and Authorization Server."
 Version: '8'
 Source-Url: https://github.com/EricWittmann/apiman-cartridge/archive/master.zip
@@ -53,8 +53,6 @@ Provides:
   - wildfly-8
   - "wildfly"
   - wildfly-standalone
-  - apiman-1.1
-  - "apiman"
 Publishes:
   publish-http-url:
     Type: "NET_TCP:httpd-proxy-info"
