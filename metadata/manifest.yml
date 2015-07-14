@@ -1,6 +1,6 @@
 Name: wildfly
 Cartridge-Short-Name: WILDFLY
-Display-Name: Keycloak 1.1.0.Final
+Display-Name: apiman 1.1.3.Final
 Description: "Authentication and Authorization Server."
 Version: '8'
 Source-Url: https://github.com/christinalau/apiman-cartridge/archive/master.zip
