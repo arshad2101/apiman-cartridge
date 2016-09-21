@@ -10,7 +10,7 @@ echo ${OPENSHIFT_WILDFLY_DIR}
 
 mkdir ${OPENSHIFT_HOMEDIR}/.m2
 #mkdir ${OPENSHIFT_WILDFLY_DIR}/{template,standalone/tmp,standalone/deployments,standalone/configuration,standalone/log,standalone/data}
-mkdir -m 777 /wildfly
+mkdir -m 777 wildfly
 mkdir ${OPENSHIFT_WILDFLY_DIR}/template
 mkdir ${OPENSHIFT_WILDFLY_DIR}/standalone/tmp
 mkdir ${OPENSHIFT_WILDFLY_DIR}/standalone/deployments
