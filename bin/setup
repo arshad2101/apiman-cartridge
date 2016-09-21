@@ -7,8 +7,8 @@ esac
 echo $OPENSHIFT_WILDFLY_DIR
 echo ${OPENSHIFT_WILDFLY_DIR}
 # Create additional directories required by JBOSSAS
-chmod 777 $OPENSHIFT_WILDFLY_DIR
-chmod 777 ${OPENSHIFT_WILDFLY_DIR}
+chmod 777 .
+chmod 777 ./
 mkdir -p ${OPENSHIFT_HOMEDIR}/.m2
 mkdir -p ${OPENSHIFT_WILDFLY_DIR}/{template,standalone/tmp,standalone/deployments,standalone/configuration,standalone/log,standalone/data}
 
