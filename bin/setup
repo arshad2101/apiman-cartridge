@@ -7,9 +7,15 @@ esac
 echo $OPENSHIFT_WILDFLY_DIR
 echo ${OPENSHIFT_WILDFLY_DIR}
 # Create additional directories required by JBOSSAS
-mkdir wildfly
+
 mkdir ${OPENSHIFT_HOMEDIR}/.m2
-mkdir ${OPENSHIFT_WILDFLY_DIR}/{template,standalone/tmp,standalone/deployments,standalone/configuration,standalone/log,standalone/data}
+#mkdir ${OPENSHIFT_WILDFLY_DIR}/{template,standalone/tmp,standalone/deployments,standalone/configuration,standalone/log,standalone/data}
+mkdir ${OPENSHIFT_WILDFLY_DIR}/template
+mkdir ${OPENSHIFT_WILDFLY_DIR}/standalone/tmp
+mkdir ${OPENSHIFT_WILDFLY_DIR}/standalone/deployments
+mkdir ${OPENSHIFT_WILDFLY_DIR}/standalone/configuration
+mkdir ${OPENSHIFT_WILDFLY_DIR}/standalone/log
+mkdir ${OPENSHIFT_WILDFLY_DIR}/standalone/data
 
 # This should be removed once OpenShift provides support for JDK 8
 mkdir -p $OPENSHIFT_WILDFLY_DIR/usr/lib/jvm
