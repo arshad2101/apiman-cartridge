@@ -4,10 +4,11 @@ case "$1" in
   -v|--version)
     version="$2"
 esac
-
+echo $OPENSHIFT_WILDFLY_DIR
+echo ${OPENSHIFT_WILDFLY_DIR}
 # Create additional directories required by JBOSSAS
 mkdir -p ${OPENSHIFT_HOMEDIR}/.m2
-sudo mkdir -p ${OPENSHIFT_WILDFLY_DIR}/{template,standalone/tmp,standalone/deployments,standalone/configuration,standalone/log,standalone/data}
+mkdir -p ${OPENSHIFT_WILDFLY_DIR}/{template,standalone/tmp,standalone/deployments,standalone/configuration,standalone/log,standalone/data}
 
 # This should be removed once OpenShift provides support for JDK 8
 mkdir -p $OPENSHIFT_WILDFLY_DIR/usr/lib/jvm
