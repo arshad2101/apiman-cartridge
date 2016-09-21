@@ -3,7 +3,7 @@ Cartridge-Short-Name: apiman
 Display-Name: apiman 1.1.4.Final
 Description: "Authentication and Authorization Server."
 Version: '8'
-Source-Url: https://github.com/christinalau/apiman-cartridge/archive/master.zip
+Source-Url: https://github.com/EricWittmann/apiman-cartridge/archive/master.zip
 License: LGPL
 License-Url: http://www.gnu.org/copyleft/lesser.txt
 Vendor: WildFly
